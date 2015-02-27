@@ -55,7 +55,7 @@ class Quadra_Atos_Model_Method_Several extends Quadra_Atos_Model_Method_Abstract
         $parameters .= " customer_id=" . $this->_getCustomerId();
         $parameters .= " customer_email=" . $this->_getCustomerEmail();
         $parameters .= " customer_ip_address=" . $this->_getCustomerIpAddress();
-        $parameters .= " data=NB_PAYMENT=" . $this->_getNbPayment() . "\;PERIOD=30\;INITIAL_AMOUNT=" . $this->_getFirstAmount() . "\;" . str_replace(',', '\;', $this->getConfig()->getSelectedDataFieldKeys());
+        $parameters .= " data=NB_PAYMENT=" . $this->_getNbPayment() . ";PERIOD=30;INITIAL_AMOUNT=" . $this->_getFirstAmount() . ";" . str_replace(',', '\;', $this->getConfig()->getSelectedDataFieldKeys());
         $parameters .= " order_id=" . $this->_getOrderId();
 
         // Initialisation du chemin de l'executable request
